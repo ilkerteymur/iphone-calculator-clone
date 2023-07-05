@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    place-items: center;
+    background:url(1.jpg);
+    
+    
+    
+    
+}
+video{
+    height: 100vh;
+    position: relative;
+    
+   
+}
+
+.calculator {
+    margin-top: 159px;
+    position: absolute;
+    flex-direction: column;
+    /* border:5px solid rgb(231, 222, 222); */
+    width: 235px;
+    height: 495px;
+    border-radius: 20px;
+    display: flex;
+    top: 100px;
+    background: black;
+
+
+}
+
+.display {
+
+    outline: none;
+    border: none;
+    margin-top: 60px;
+    width: 100%;
+
+}
+
+.display input {
+    border: none;
+    background-color: black;
+    outline: none;
+    font-size: 55px;
+    width: 80%;
+    height: 100px;
+    margin-top: 15px;
+    margin-left: 34px;
+    border-radius: 20px;
+    text-align: right;
+    color: white;
+
+}
+
+input::placeholder{
+    color: white;
+    font-size: 50px;
+}
+
+
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    padding: 10px;
+    background: black;
+    position: absolute;
+    margin-top: 160px;
+    margin-left: -5px;
+}
+
+.buttons button {
+    cursor: pointer;
+    font-size: 30px;
+    height: 45px;
+    border-radius: 30px;
+    background-color: rgb(31, 27, 27);
+    color: white;border: none;
+    width: 45px;
+}
+
+button:nth-child(4n),
+button:last-child {
+    background-color: rgb(218, 171, 18);
+
+}
+
+button:nth-child(1) {
+    
+    font-size: 20px;
+    font-weight: 500;
+}
+
+button:nth-child(-n+3) {
+    background-color: rgb(116, 114, 109);
+    color: black;
+}
+
+#zero {
+    grid-column: span 2;
+    width: 100%;
+    text-align: start;
+    padding-left: 20px;
+}
+
+.border{
+    width: 95px;
+    height: 1px;
+    color: white;
+    position: relative;
+    border: 1px solid white;
+    border-radius: 2px;
+    top: 310px;
+    left: 70px;
+}
+#clock {
+    font-family: sans-serif;
+	font-size: 11px;
+    color: white;
+	width: 900px;
+	margin: 200px;
+	text-align: center;
+	border-radius: 20px;
+    position: absolute;
+    z-index: 1;
+    top: 65px;
+    left: 230px;
+
+}
+
+
+.icons{
+    display: flex;
+    font-size: 11px;
+    position: absolute;
+    top: 265px;
+    color: white;
+    z-index: 1;
+    left: 1006px;
+    gap: 4px;
+}
