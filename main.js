@@ -18,14 +18,38 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+//! Calculator
 
 let currentNumber = "";
 let operator = "";
 let previousNumber = "";
+let operators = ["+","-","*","/","%"];
 
 function display(value) {
-    document.getElementById("display2").value += value;
+    let process = document.getElementById("display2").value;
+    if(process == "") {
+        for (let j = 0; j < operators.length; j++) {
+            if (value.includes(operators[j])) {
+                console.log(j);
+                return null;
+            }               
+        }
+                   
+    }     
+    for (let i = 0; i < operators.length; i++) {
+        if (process.includes(operators[i])) {
+            for (let j = 0; j < operators.length; j++) {
+                if (value.includes(operators[j])) {
+                    console.log(j);
+                    return null;
+                }               
+            }            
+                    
+        }
+            
     }
+    document.getElementById("display2").value += value;
+}
 
     
 
